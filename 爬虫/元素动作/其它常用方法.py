@@ -1,17 +1,18 @@
+#coding=utf-8
 from selenium import webdriver
 
 driver = webdriver.Chrome()
 driver.get("http://www.baidu.com")
-# »ñµÃÊäÈë¿òµÄ³ß´ç
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ß´ï¿½
 size = driver.find_element_by_id('kw').size
 print(size)
-# ·µ»Ø°Ù¶ÈÒ³Ãæµ×²¿±¸°¸ĞÅÏ¢
+# ï¿½ï¿½ï¿½Ø°Ù¶ï¿½Ò³ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 text = driver.find_element_by_id("cp").text
 print(text)
-# ·µ»ØÔªËØµÄÊôĞÔÖµ£¬ ¿ÉÒÔÊÇ id¡¢name¡¢type »òÆäËûÈÎÒâÊôĞÔ
+# ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ idï¿½ï¿½nameï¿½ï¿½type ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 attribute = driver.find_element_by_id("kw").get_attribute('type')
 print(attribute)
-# ·µ»ØÔªËØµÄ½á¹ûÊÇ·ñ¿É¼û£¬ ·µ»Ø½á¹ûÎª True »ò False
+# ï¿½ï¿½ï¿½ï¿½Ôªï¿½ØµÄ½ï¿½ï¿½ï¿½Ç·ï¿½É¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø½ï¿½ï¿½Îª True ï¿½ï¿½ False
 result = driver.find_element_by_id("kw").is_displayed()
 print(result)
 driver.quit()

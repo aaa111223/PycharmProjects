@@ -1,29 +1,30 @@
+#coding=utf-8
 from selenium import webdriver
-# ÒıÈë Keys Ä£¿é
+# ï¿½ï¿½ï¿½ï¿½ Keys Ä£ï¿½ï¿½
 from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Chrome()
 driver.get("http://www.baidu.com")
 
-# ÊäÈë¿òÊäÈëÄÚÈİ
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 driver.find_element_by_id("kw").send_keys("seleniumm")
 
-# É¾³ı¶àÊäÈëµÄÒ»¸ö
+# É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 driver.find_element_by_id("kw").send_keys(Keys.BACK_SPACE)
 
-# ÊäÈë¿Õ¸ñ¼ü+¡°½Ì³Ì¡±
+# ï¿½ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½+ï¿½ï¿½ï¿½Ì³Ì¡ï¿½
 driver.find_element_by_id("kw").send_keys(Keys.SPACE)
-driver.find_element_by_id("kw").send_keys("½Ì³Ì")
+driver.find_element_by_id("kw").send_keys("ï¿½Ì³ï¿½")
 
-# ctrl+a È«Ñ¡ÊäÈë¿òÄÚÈİ
+# ctrl+a È«Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 driver.find_element_by_id("kw").send_keys(Keys.CONTROL, 'a')
 
-# ctrl+x ¼ôÇĞÊäÈë¿òÄÚÈİ
+# ctrl+x ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 driver.find_element_by_id("kw").send_keys(Keys.CONTROL, 'x')
 
-# ctrl+v Õ³ÌùÄÚÈİµ½ÊäÈë¿ò
+# ctrl+v Õ³ï¿½ï¿½ï¿½ï¿½ï¿½İµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 driver.find_element_by_id("kw").send_keys(Keys.CONTROL, 'v')
 
-# Í¨¹ı»Ø³µ¼üÀ´´úÌæµ¥»÷²Ù×÷
+# Í¨ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æµ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 driver.find_element_by_id("su").send_keys(Keys.ENTER)
 driver.quit()

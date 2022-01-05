@@ -1,8 +1,9 @@
+#coding=utf-8
 from selenium import webdriver
 
 browser = webdriver.Chrome()
 browser.get('http://www.baidu.com/')
-# ²ÎÊıÊı×ÖÎªÏñËØµã
-print("ÉèÖÃä¯ÀÀÆ÷¿í480¡¢¸ß800ÏÔÊ¾")
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Øµï¿½
+print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½480ï¿½ï¿½ï¿½ï¿½800ï¿½ï¿½Ê¾")
 browser.set_window_size(480, 800)
 browser.quit()
