@@ -1,11 +1,12 @@
+#coding=utf-8
 from selenium import webdriver
-# ÒıÈë ActionChains Àà
+# ï¿½ï¿½ï¿½ï¿½ ActionChains ï¿½ï¿½
 from selenium.webdriver.common.action_chains import ActionChains
 
 driver = webdriver.Chrome()
 driver.get("https://www.baidu.cn")
 
-# ¶¨Î»µ½ÒªĞüÍ£µÄÔªËØ
-above = driver.find_element_by_link_text("ÉèÖÃ")
-# ¶Ô¶¨Î»µ½µÄÔªËØÖ´ĞĞÊó±êĞüÍ£²Ù×÷
+# ï¿½ï¿½Î»ï¿½ï¿½Òªï¿½ï¿½Í£ï¿½ï¿½Ôªï¿½ï¿½
+above = driver.find_element_by_link_text("ï¿½ï¿½ï¿½ï¿½")
+# ï¿½Ô¶ï¿½Î»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½
 ActionChains(driver).move_to_element(above).perform()
