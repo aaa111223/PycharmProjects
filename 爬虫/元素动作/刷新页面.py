@@ -1,9 +1,10 @@
+#coding=utf-8
 from selenium import webdriver
 
 browser = webdriver.Chrome()
 
-#访问百度首页
+#璁块棶鐧惧害棣栭〉
 url= 'http://www.baidu.com'
 browser.get(url)
-#刷新当前页面
+#鍒锋柊褰撳墠椤甸潰
 browser.refresh()

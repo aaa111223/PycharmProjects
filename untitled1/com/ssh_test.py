@@ -9,6 +9,7 @@ def cmpt(s1,s2):
     t2 = time.strptime(s2,fmt)
     return time.mktime(t1) - time.mktime(t2)
 
+
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect("192.168.248.128","22","lw","123456")

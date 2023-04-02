@@ -20,17 +20,17 @@ def load_mord(num):
     load_more.click()
 #获取内容源码
 def get_html():
-    note_list=driver.find_element_by_class_name("note-list")
-    html=note_list.get_attribute('innerHTML')
+    note_list = driver.find_element_by_class_name("note-list")
+    html = note_list.get_attribute('innerHTML')
     return html
 
 #传入内容网页源码，使用xpath提取信息标题、简介、发布昵称
 def extract_data(content_html):
     html = etree.HTML(content_html)
-    title_list =html.xpath('//li//a[@class="title"]/text()')
-    abstract_list=html.xpath('//li//p[@class="abstract"]/text()')
-    nickname_list=html.xpath('//li//a[@class="nickname"]/text()')
-    data_list=[]
+    title_list = html.xpath('//li//a[@class="title"]/text()')
+    abstract_list = html.xpath('//li//p[@class="abstract"]/text()')
+    nickname_list = html.xpath('//li//a[@class="nickname"]/text()')
+    data_list = []
     for index,x in enumerate(title_list):
         item={}
         item["title"]=title_list[index]
@@ -59,7 +59,7 @@ for x in range(2):
 
 results=extract_data(get_html())
 for item in results:
-        sql="insert into tb_test(title,abstract,nickname) values('%s','%s','%s')" \
+        sql = "insert into tb_test(title,abstract,nickname) values('%s','%s','%s')" \
         ""%(item["title"],item["abstract"],item["nickname"])
         print(item)
         insert_data(sql)
