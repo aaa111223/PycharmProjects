@@ -1,0 +1,5 @@
+{
+    "{http://schemas.xmlsoap.org/soap/envelope/}Body": {
+        "{http://bosent.com/facility/webservice/pool/transdiscount/}facFransferDiscount": "\n\t\t\t"
+    }
+}
