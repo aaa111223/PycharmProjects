@@ -21,9 +21,9 @@ time.sleep(5)
 
 # 输入用户名和密码
 username_input = driver.find_element_by_xpath("//input[@id='username']")
-username_input.send_keys("15210987982")
+username_input.send_keys("xxxxx")
 password_input = driver.find_element_by_xpath("//input[@id='password']")
-password_input.send_keys("1qazxsw2")
+password_input.send_keys("xxxxx")
 
 # 点击登录按钮
 login_button = driver.find_element_by_xpath("//a[@id='loginSub']")
